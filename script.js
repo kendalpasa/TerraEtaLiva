@@ -22,10 +22,14 @@ fetch(url)
   });
 
 getStartedButton.onclick = function () {
-  window.location.href = "app.html";
+  getStartedClick();
 };
 
-function scrollToSection() {
+learnMoreButton.onclick = function () {
+  learnMoreClick();
+};
+
+function getStartedClick() {
   const viewerSection = document.getElementById("viewer");
 
   viewerSection.scrollIntoView({
@@ -34,7 +38,11 @@ function scrollToSection() {
   });
 }
 
-function getStartedClick() {
-  console.log("Get Started button clicked");
-  window.location.href = "app.html";
+function learnMoreClick() {
+  const aboutSection = document.getElementById("about");
+
+  aboutSection.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
 }

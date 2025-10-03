@@ -9,18 +9,18 @@
   </head>
 
   <body>
-    <section>
-      <nav>
-        <div class="nav-container">
-          <ul>
-            <li id="logo">SIX GUYS</li>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="app.html">App</a></li>
-          </ul>
-        </div>
-      </nav>
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li id="logo">SIX GUYS</li>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">App</a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <section class="hero-section">
       <h1 id="embgyeyesH1">
         EMBIGGEN <br />
         YOUR EYES
@@ -36,6 +36,23 @@
         <button id="learnMoreButton">Learn More</button>
         <button id="getStartedButton">Get Started</button>
       </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2 class="h2s">About TerraEtaLiva</h2>
+      <p class="about-text">
+        TerraEtaLiva is an application that allows users to explore
+        high-resolution images from NASA's collection. With the help of
+        OpenSeadragon, users can zoom in and out of these images to see
+        incredible details that are not visible to the naked eye. Whether you're
+        a space enthusiast or just curious about the universe, TerraEtaLiva
+        provides an engaging way to discover the wonders of space.
+      </p>
+    </section>
+
+    <section id="viewer" class="viewer-section">
+      <h2>Explore Nasa Image</h2>
+      <div id="openseadragon1"></div>
     </section>
 
     <script src="script.js"></script>
