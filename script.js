@@ -3,6 +3,16 @@ var viewer = OpenSeadragon({
   prefixUrl:
     "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/images/",
   showNavigator: true,
+  showFullPageControl: false,
+  showHomeControl: false,
+  showZoomControl: false,
+  visibilityRatio: 1.0,
+  constrainDuringPan: true,
+  homeFillsViewer: true,
+  minZoomLevel: 1,
+  defaultZoomLevel: 1,
+  maxZoomPixelRatio: 2,
+  backgroundColor: "#000",
 });
 
 const apiKey = "5KvmVfJn8h8O67Tqwt8fmTSzXFcN7HzCjQEp7Ogk";
@@ -46,3 +56,17 @@ function learnMoreClick() {
     block: "start",
   });
 }
+
+document.getElementById("zoom-in").onclick = function () {
+  viewer.viewport.zoomBy(1.2);
+  viewer.viewport.applyConstraints();
+};
+
+document.getElementById("zoom-out").onclick = function () {
+  viewer.viewport.zoomBy(0.8);
+  viewer.viewport.applyConstraints();
+};
+
+document.getElementById("home").onclick = function () {
+  viewer.viewport.goHome();
+};
